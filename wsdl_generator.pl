@@ -97,13 +97,13 @@ print "   	</xs:schema>\n\t</wsdl:types>\n";
 for $i (0 .. $#data){
 	$here = <<TEMPLATE_MESSAGES;
     <wsdl:message name="$data[$i]{operationInputMsgName}">
-    	<wsdl:part name="body" type="tns:$data[$i]{operationInputElement}"/>
+    	<wsdl:part name="body" element="tns:$data[$i]{operationInputElement}"/>
     </wsdl:message>
     <wsdl:message name="$data[$i]{operationOutputMsgName}">
-    	<wsdl:part name="body" type="tns:$data[$i]{operationOutputElement}"/>
+    	<wsdl:part name="body" element="tns:$data[$i]{operationOutputElement}"/>
     </wsdl:message>
     <wsdl:message name="$data[$i]{operationFaultMsgName}">
-    	<wsdl:part name="body" type="tns:$data[$i]{operationFaultElement}"/>
+    	<wsdl:part name="body" element="tns:$data[$i]{operationFaultElement}"/>
     </wsdl:message>
 TEMPLATE_MESSAGES
 	print $here . "\n";
