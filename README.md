@@ -17,11 +17,11 @@ If operation list is omitted, then it defaults to one operation named "Get"
 
 Options:
 --------
--v or --verbose be verbose. All messages will be written as HTML comments, so if you redirected output in file, it is safe.
---nofaults do not generate fault contracts
---exclude_basename do not complete operation names with basename, so if you specified operation Put in command line it will be called Put in WSDL, instead of `Put<basename>`
+* -v or --verbose be verbose. All messages will be written as HTML comments, so if you redirected output in file, it is safe.
+* --nofaults do not generate fault contracts
+* --exclude_basename do not complete operation names with basename, so if you specified operation Put in command line it will be called Put in WSDL, instead of `Put<basename>`
 
 Example:
 --------
-`wsdl_generator.pl Test http://test.localhost/`
-Will generate service called TestService in namespace http://test.localhost/ located at http://test.localhost/TestServiceю It will have one operation named GetTest
+`wsdl_generator.pl Test http://test.localhost/`  
+Will generate service called TestService in namespace http://test.localhost/ located at http://test.localhost/TestService It will have one operation named GetTest
